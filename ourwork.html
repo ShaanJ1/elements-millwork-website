@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elements Millwork and Flooring Inc</title>
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="images/logo.png"></a>
+        </header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ourwork.html">Our Work</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Gallery</h2>
+            <!-- <button id="loadMore">Load More</button> -->
+            <ul class="gallery" id="gallery"></ul>
+
+            <!-- Dynamically add images to the gallery list -->
+            <script>
+                const gallery = document.getElementById("gallery")
+                // const loadMoreButton = document.getElementById("loadMore")
+                const totalImages = 10
+                let imagesLoaded = 0
+
+                function loadImages() {
+                    for (let i = 1; i <= totalImages; i++) {
+                        const li = document.createElement('li')
+                        const img = document.createElement('img')
+                        img.loading = "lazy"
+                        img.src = `images/showcase/${i}.jpg`
+                        img.onerror = function() {
+                            this.src = 'images/placeholder.jpg'; // Path to placeholder image
+                        }
+                        li.appendChild(img)
+                        gallery.appendChild(li)
+                        imagesLoaded++
+                    }
+                    // Hide show more button once all images have been displayed
+                    if (imagesLoaded >= totalImages) {
+                        // loadMoreButton.style.display = 'none';
+                    }
+                }
+
+                loadImages()
+                // loadMoreButton.addEventListener('click', loadImages)
+            </script>
+            
+        </main>
+        <footer>
+            <hr>
+            1435 40 Ave NE Unit No 1, Calgary, AB T2E 8N6
+            <br>
+            Phone: (403) 776 7456
+            <br>    
+            Email: <a href="mailto:sales@emfinc.ca">sales@emfinc.ca</a>
+            <br>
+            &copy; 2025 Elements Millwork & Flooring Inc. All rights reserved.
+            <br>
+            <ul class="socials">
+                <li>
+                    <a href="https://www.instagram.com/elementsmillwork" target="_blank" rel="noopener">
+                        <img src="images/instagram.svg" height="30">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
