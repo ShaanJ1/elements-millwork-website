@@ -7,21 +7,19 @@ body, html {
 header {
     position: absolute;
     width: 100%;
-    background-color: rgba(252, 252, 252, 0.205);
-    text-align: center;
-}
-
-.navbar {
-    position: absolute;
-    width: 100%;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-right: 15px;
     display: flex;
     justify-content: flex-end; /* Align to the right */
+    gap: 10px;
 }
 
 .navbar li {
@@ -34,10 +32,13 @@ header {
     padding: 15px;
     display: block;
     transition: background-color 0.3s;
+    font-size: large;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .navbar a:hover {
-    background-color: rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
 }
 
 #galleryMain {
@@ -47,11 +48,13 @@ header {
     gap: 20px;
     min-height: 100vh;
     padding: 20px;
+    margin-top: 120px;
 }
 
 main li{
     display:inline-block
 }
+
 main img {
     display: block;
     width: 100%;
@@ -112,5 +115,16 @@ footer ul {
 }
 
 .socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
     display: inline-block;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.socials img:hover {
+    background-color: rgb(216, 216, 216);
 }
