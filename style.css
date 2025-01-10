@@ -41,7 +41,7 @@ header {
     color: rgb(216, 216, 216);
 }
 
-#galleryMain {
+#gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +62,7 @@ main img {
     object-fit: c;
 }
 
-#gallery {
+#galleryList {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -72,13 +72,13 @@ main img {
     justify-content: center; 
 }
 
-#gallery li {
+#galleryList li {
     flex: 1 1 calc(33.333% - 12px); /* 3 items per row */
     max-width: calc(33.333% - 12px);
     box-sizing: border-box;
 }
 
-#gallery img {
+#galleryList img {
     width: 100%;
     height: auto;
     border-radius: 5px;
