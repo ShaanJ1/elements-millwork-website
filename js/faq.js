@@ -9,14 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const answer = this.nextElementSibling;
             if (isExpanded) {
                 answer.style.maxHeight = '0';
-                answer.style.opacity = '0';
-                answer.style.marginTop = '0';
-                answer.style.padding = '0';
             } else {
                 answer.style.maxHeight = answer.scrollHeight + 'px';
-                answer.style.opacity = '1';
-                answer.style.marginTop = '10px';
-                answer.style.padding = '5px 0 15px';
             }
         });
     });
