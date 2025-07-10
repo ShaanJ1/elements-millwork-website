@@ -587,7 +587,7 @@ main section {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     margin: 0 auto;
-    transition: opacity var(--transition);
+    transition: var(--transition);
 }
 
 .testimonial p {
